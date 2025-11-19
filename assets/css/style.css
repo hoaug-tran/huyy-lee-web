@@ -176,7 +176,7 @@ body {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url(https://scontent.fhan5-10.fna.fbcdn.net/v/t1.6435-9/97698605_107775797615524_4410948227788963840_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=CfJlPzs7NQAQ7kNvwEY_-zx&_nc_oc=Adm2LY589vY_HxC6nsWeb0aAxrphdpy6qLdaUmiU5KR-y4GiG4aJJvO_t9BqwJ7TnNQ&_nc_zt=23&_nc_ht=scontent.fhan5-10.fna&_nc_gid=Vahff0BZXYd3nB6L1ZmSfA&oh=00_AfdrnrKqv5MZVNNhuMqB_9shooi-F4uhl-BllMjdvibMpA&oe=690C2F0D)
+  background: url('../img/anh20.jpg')
     center 25% / cover no-repeat;
   filter: brightness(0.8);
 }
