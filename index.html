@@ -62,29 +62,17 @@
 
           <div id="members" class="grid grid-3 gap-24 mt-32">
             <article class="card center">
-              <img
-                class="avatar"
-                src="./assets/img/2.jpg"
-                alt="Lê Cúc Hoa"
-              />
+              <img class="avatar" src="./assets/img/2.jpg" alt="Lê Cúc Hoa" />
               <h3 class="name">Lê Cúc Hoa</h3>
             </article>
 
             <article class="card center">
-              <img
-                class="avatar"
-                src="./assets/img/3.jpg"
-                alt="Lê Thị Nhung"
-              />
+              <img class="avatar" src="./assets/img/3.jpg" alt="Lê Thị Nhung" />
               <h3 class="name">Lê Thị Nhung</h3>
             </article>
 
             <article class="card center">
-              <img
-                class="avatar"
-                src="./assets/img/4.jpg"
-                alt="Lê Thanh Cúc"
-              />
+              <img class="avatar" src="./assets/img/4.jpg" alt="Lê Thanh Cúc" />
               <h3 class="name">Lê Thanh Cúc</h3>
             </article>
 
@@ -96,7 +84,7 @@
               />
               <h3 class="name">Trần Kính Hoàng - supporter coding</h3>
             </article>
-             <article class="card center">
+            <article class="card center">
               <img
                 class="avatar"
                 src="./assets/img/6.jpg"
@@ -104,20 +92,12 @@
               />
               <h3 class="name">Nguyễn Thị Hiến</h3>
             </article>
-             <article class="card center">
-              <img
-                class="avatar"
-                src="./assets/img/5.jpg"
-                alt="Lê Văn Huy"
-              />
+            <article class="card center">
+              <img class="avatar" src="./assets/img/5.jpg" alt="Lê Văn Huy" />
               <h3 class="name">Lê Văn Huy</h3>
             </article>
-             <article class="card center">
-              <img
-                class="avatar"
-                src="./assets/img/7.jpg"
-                alt="Lê Văn Dũng"
-              />
+            <article class="card center">
+              <img class="avatar" src="./assets/img/7.jpg" alt="Lê Văn Dũng" />
               <h3 class="name">Lê Văn Dũng</h3>
             </article>
           </div>
@@ -137,11 +117,7 @@
 
           <div class="grid grid-3 gap-24 mt-24">
             <article class="place">
-              <img
-                class="place-img"
-                src="./assets/img/11.jpg"
-                alt="Nghệ An"
-              />
+              <img class="place-img" src="./assets/img/11.jpg" alt="Nghệ An" />
               <div class="place-body">
                 <h3>Nghệ An</h3>
                 <p class="muted">Fri 27 Nov 2016</p>
@@ -150,11 +126,7 @@
             </article>
 
             <article class="place">
-              <img
-                class="place-img"
-                src="./assets/img/10.jpg"
-                alt="Xuân Lai"
-              />
+              <img class="place-img" src="./assets/img/10.jpg" alt="Xuân Lai" />
               <div class="place-body">
                 <h3>Nghệ An</h3>
                 <p class="muted">Fri 27 Nov 2016</p>
@@ -163,11 +135,7 @@
             </article>
 
             <article class="place">
-              <img
-                class="place-img"
-                src="./assets/img/9.jpg"
-                alt="Nghệ An"
-              />
+              <img class="place-img" src="./assets/img/9.jpg" alt="Nghệ An" />
               <div class="place-body">
                 <h3>Nghệ An</h3>
                 <p class="muted">Fri 27 Nov 2016</p>
@@ -193,12 +161,28 @@
               </p>
             </div>
 
-            <form class="card form">
+            <form id="contact-form" class="card form">
               <div class="grid grid-2 gap-12">
-                <input type="text" placeholder="Name" class="input" />
-                <input type="email" placeholder="Email" class="input" />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  class="input"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  class="input"
+                />
               </div>
-              <input type="text" placeholder="Message" class="input mt-12" />
+
+              <input
+                type="text"
+                name="message"
+                placeholder="Message"
+                class="input mt-12"
+              />
               <button type="submit" class="btn mt-12">SEND</button>
             </form>
           </div>
@@ -208,10 +192,7 @@
       <section class="section pb-0">
         <div class="container">
           <figure class="map">
-            <img
-              src="./assets/img/12.jpg"
-              alt="Gia Bình Bắc Ninh."
-            />
+            <img src="./assets/img/12.jpg" alt="Gia Bình Bắc Ninh." />
           </figure>
         </div>
       </section>
@@ -232,26 +213,31 @@
         </a>
       </div>
     </footer>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-(function(){
-    // Nhập đúng Public Key bạn lấy trên EmailJS Dashboard
-    emailjs.init("xpsUjL131YTpoZqP4");
-})();
-document.querySelector('.form').addEventListener('submit', function(e){
-    e.preventDefault();
-    emailjs.send("service_5uhu28j", "template_slrxkxa", {
-        name: document.querySelector('input[placeholder="Name"]').value,
-        email: document.querySelector('input[placeholder="Email"]').value,
-        message: document.querySelector('input[placeholder="Message"]').value,
-    }).then(function(response) {
-        alert("Gửi thành công!");
-        document.querySelector('.form').reset();
-    }, function(error) {
-        alert("Gửi thất bại, thử lại sau!");
-    });
-});
-</script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "xpsUjL131YTpoZqP4",
+        });
+      })();
+    </script>
 
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('service_5uhu28j','template_slrxkxa', this)
+                    .then(() => {
+                        window.alert('SUCCESS!');
+                    }, (error) => {
+                        window.alert('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+    </script>
   </body>
 </html>
