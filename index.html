@@ -232,5 +232,26 @@
         </a>
       </div>
     </footer>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+(function(){
+    // Nhập đúng Public Key bạn lấy trên EmailJS Dashboard
+    emailjs.init("xpsUjL131YTpoZqP4");
+})();
+document.querySelector('.form').addEventListener('submit', function(e){
+    e.preventDefault();
+    emailjs.send("service_5uhu28j", "template_slrxkxa", {
+        name: document.querySelector('input[placeholder="Name"]').value,
+        email: document.querySelector('input[placeholder="Email"]').value,
+        message: document.querySelector('input[placeholder="Message"]').value,
+    }).then(function(response) {
+        alert("Gửi thành công!");
+        document.querySelector('.form').reset();
+    }, function(error) {
+        alert("Gửi thất bại, thử lại sau!");
+    });
+});
+</script>
+
   </body>
 </html>
